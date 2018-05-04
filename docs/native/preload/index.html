@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" data-framework="javascript">
+  <head>
+    <meta charset="utf-8">
+    <title>ESModules VanillaJS • TodoMVC</title>
+
+    <link rel=stylesheet href="todoapp.css">
+    <link rel=stylesheet href="app.css">
+
+
+
+    <link rel="modulepreload" href="lodash/_freeGlobal.js" >
+    <link rel="modulepreload" href="lodash/_root.js" >
+    <link rel="modulepreload" href="lodash/_Symbol.js" >
+    <link rel="modulepreload" href="lodash/_arrayMap.js" >
+    <link rel="modulepreload" href="lodash/isArray.js" >
+    <link rel="modulepreload" href="lodash/_getRawTag.js" >
+    <link rel="modulepreload" href="lodash/_objectToString.js" >
+    <link rel="modulepreload" href="lodash/_baseGetTag.js" >
+    <link rel="modulepreload" href="lodash/isObjectLike.js" >
+    <link rel="modulepreload" href="lodash/isSymbol.js" >
+    <link rel="modulepreload" href="lodash/_baseToString.js" >
+    <link rel="modulepreload" href="lodash/toString.js" >
+    <link rel="modulepreload" href="lodash/_baseSlice.js" >
+    <link rel="modulepreload" href="lodash/_castSlice.js" >
+    <link rel="modulepreload" href="lodash/_hasUnicode.js" >
+    <link rel="modulepreload" href="lodash/_asciiToArray.js" >
+    <link rel="modulepreload" href="lodash/_unicodeToArray.js" >
+    <link rel="modulepreload" href="lodash/_stringToArray.js" >
+    <link rel="modulepreload" href="lodash/_createCaseFirst.js" >
+    <link rel="modulepreload" href="lodash/upperFirst.js" >
+    <link rel="modulepreload" href="lodash/capitalize.js" >
+    <link rel="modulepreload" href="lodash/_arrayReduce.js" >
+    <link rel="modulepreload" href="lodash/_basePropertyOf.js" >
+    <link rel="modulepreload" href="lodash/_deburrLetter.js" >
+    <link rel="modulepreload" href="lodash/deburr.js" >
+    <link rel="modulepreload" href="lodash/_asciiWords.js" >
+    <link rel="modulepreload" href="lodash/_hasUnicodeWord.js" >
+    <link rel="modulepreload" href="lodash/_unicodeWords.js" >
+    <link rel="modulepreload" href="lodash/words.js" >
+    <link rel="modulepreload" href="lodash/_createCompounder.js" >
+    <link rel="modulepreload" href="lodash/camelCase.js" >
+    <link rel="modulepreload" href="lodash/_baseClamp.js" >
+    <link rel="modulepreload" href="lodash/isObject.js" >
+    <link rel="modulepreload" href="lodash/toNumber.js" >
+    <link rel="modulepreload" href="lodash/toFinite.js" >
+    <link rel="modulepreload" href="lodash/toInteger.js" >
+    <link rel="modulepreload" href="lodash/endsWith.js" >
+    <link rel="modulepreload" href="lodash/_escapeHtmlChar.js" >
+    <link rel="modulepreload" href="lodash/escape.js" >
+    <link rel="modulepreload" href="lodash/escapeRegExp.js" >
+    <link rel="modulepreload" href="lodash/kebabCase.js" >
+    <link rel="modulepreload" href="lodash/lowerCase.js" >
+    <link rel="modulepreload" href="lodash/lowerFirst.js" >
+    <link rel="modulepreload" href="lodash/_baseRepeat.js" >
+    <link rel="modulepreload" href="lodash/_baseProperty.js" >
+    <link rel="modulepreload" href="lodash/_asciiSize.js" >
+    <link rel="modulepreload" href="lodash/_unicodeSize.js" >
+    <link rel="modulepreload" href="lodash/_stringSize.js" >
+    <link rel="modulepreload" href="lodash/_createPadding.js" >
+    <link rel="modulepreload" href="lodash/pad.js" >
+    <link rel="modulepreload" href="lodash/padEnd.js" >
+    <link rel="modulepreload" href="lodash/padStart.js" >
+    <link rel="modulepreload" href="lodash/parseInt.js" >
+    <link rel="modulepreload" href="lodash/eq.js" >
+    <link rel="modulepreload" href="lodash/isFunction.js" >
+    <link rel="modulepreload" href="lodash/isLength.js" >
+    <link rel="modulepreload" href="lodash/isArrayLike.js" >
+    <link rel="modulepreload" href="lodash/_isIndex.js" >
+    <link rel="modulepreload" href="lodash/_isIterateeCall.js" >
+    <link rel="modulepreload" href="lodash/repeat.js" >
+    <link rel="modulepreload" href="lodash/replace.js" >
+    <link rel="modulepreload" href="lodash/snakeCase.js" >
+    <link rel="modulepreload" href="lodash/_baseIsRegExp.js" >
+    <link rel="modulepreload" href="lodash/_baseUnary.js" >
+    <link rel="modulepreload" href="lodash/_nodeUtil.js" >
+    <link rel="modulepreload" href="lodash/isRegExp.js" >
+    <link rel="modulepreload" href="lodash/split.js" >
+    <link rel="modulepreload" href="lodash/startCase.js" >
+    <link rel="modulepreload" href="lodash/startsWith.js" >
+    <link rel="modulepreload" href="lodash/_coreJsData.js" >
+    <link rel="modulepreload" href="lodash/_isMasked.js" >
+    <link rel="modulepreload" href="lodash/_toSource.js" >
+    <link rel="modulepreload" href="lodash/_baseIsNative.js" >
+    <link rel="modulepreload" href="lodash/_getValue.js" >
+    <link rel="modulepreload" href="lodash/_getNative.js" >
+    <link rel="modulepreload" href="lodash/_defineProperty.js" >
+    <link rel="modulepreload" href="lodash/_baseAssignValue.js" >
+    <link rel="modulepreload" href="lodash/_assignValue.js" >
+    <link rel="modulepreload" href="lodash/_copyObject.js" >
+    <link rel="modulepreload" href="lodash/identity.js" >
+    <link rel="modulepreload" href="lodash/_apply.js" >
+    <link rel="modulepreload" href="lodash/_overRest.js" >
+    <link rel="modulepreload" href="lodash/constant.js" >
+    <link rel="modulepreload" href="lodash/_baseSetToString.js" >
+    <link rel="modulepreload" href="lodash/_shortOut.js" >
+    <link rel="modulepreload" href="lodash/_setToString.js" >
+    <link rel="modulepreload" href="lodash/_baseRest.js" >
+    <link rel="modulepreload" href="lodash/_createAssigner.js" >
+    <link rel="modulepreload" href="lodash/_baseTimes.js" >
+    <link rel="modulepreload" href="lodash/_baseIsArguments.js" >
+    <link rel="modulepreload" href="lodash/isArguments.js" >
+    <link rel="modulepreload" href="lodash/stubFalse.js" >
+    <link rel="modulepreload" href="lodash/isBuffer.js" >
+    <link rel="modulepreload" href="lodash/_baseIsTypedArray.js" >
+    <link rel="modulepreload" href="lodash/isTypedArray.js" >
+    <link rel="modulepreload" href="lodash/_arrayLikeKeys.js" >
+    <link rel="modulepreload" href="lodash/_isPrototype.js" >
+    <link rel="modulepreload" href="lodash/_nativeKeysIn.js" >
+    <link rel="modulepreload" href="lodash/_baseKeysIn.js" >
+    <link rel="modulepreload" href="lodash/keysIn.js" >
+    <link rel="modulepreload" href="lodash/assignInWith.js" >
+    <link rel="modulepreload" href="lodash/_overArg.js" >
+    <link rel="modulepreload" href="lodash/_getPrototype.js" >
+    <link rel="modulepreload" href="lodash/isPlainObject.js" >
+    <link rel="modulepreload" href="lodash/isError.js" >
+    <link rel="modulepreload" href="lodash/attempt.js" >
+    <link rel="modulepreload" href="lodash/_baseValues.js" >
+    <link rel="modulepreload" href="lodash/_customDefaultsAssignIn.js" >
+    <link rel="modulepreload" href="lodash/_escapeStringChar.js" >
+    <link rel="modulepreload" href="lodash/_nativeKeys.js" >
+    <link rel="modulepreload" href="lodash/_baseKeys.js" >
+    <link rel="modulepreload" href="lodash/keys.js" >
+    <link rel="modulepreload" href="lodash/_reInterpolate.js" >
+    <link rel="modulepreload" href="lodash/_reEscape.js" >
+    <link rel="modulepreload" href="lodash/_reEvaluate.js" >
+    <link rel="modulepreload" href="lodash/templateSettings.js" >
+    <link rel="modulepreload" href="lodash/template.js" >
+    <link rel="modulepreload" href="lodash/toLower.js" >
+    <link rel="modulepreload" href="lodash/toUpper.js" >
+    <link rel="modulepreload" href="lodash/_baseFindIndex.js" >
+    <link rel="modulepreload" href="lodash/_baseIsNaN.js" >
+    <link rel="modulepreload" href="lodash/_strictIndexOf.js" >
+    <link rel="modulepreload" href="lodash/_baseIndexOf.js" >
+    <link rel="modulepreload" href="lodash/_charsEndIndex.js" >
+    <link rel="modulepreload" href="lodash/_charsStartIndex.js" >
+    <link rel="modulepreload" href="lodash/trim.js" >
+    <link rel="modulepreload" href="lodash/trimEnd.js" >
+    <link rel="modulepreload" href="lodash/trimStart.js" >
+    <link rel="modulepreload" href="lodash/truncate.js" >
+    <link rel="modulepreload" href="lodash/_unescapeHtmlChar.js" >
+    <link rel="modulepreload" href="lodash/unescape.js" >
+    <link rel="modulepreload" href="lodash/upperCase.js" >
+    <link rel="modulepreload" href="lodash/string.default.js" >
+    <link rel="modulepreload" href="lodash/string.js" >
+    <link rel="modulepreload" href="template.js" >
+
+
+
+  </head>
+  <body>
+
+
+    <section class="nosupport" hidden>
+      <h4>Apologies.. your browser doesn't support ES Modules. </h4>
+      <p>You <a href="https://github.com/paulirish/es-modules-todomvc#readme">may be able to enable them with a flag</a>.
+    </section>
+
+    <script nomodule>
+      // script only runs browsers that don't support modules (ideally)
+      document.querySelector('.nosupport').hidden = false;
+    </script>
+    <script type=module>
+      // requires modules to hide. (FOUC in non-[nomodule] supporting browsers right now)
+     import {qs} from './helpers.js'
+      qs('.nosupport').hidden = true;
+    </script>
+
+
+    <section class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+        <input class="new-todo" placeholder="What needs to be done?" autofocus>
+      </header>
+      <section class="main">
+        <input class="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list"></ul>
+      </section>
+      <footer class="footer">
+        <span class="todo-count"></span>
+        <ul class="filters">
+          <li>
+            <a href="#/" class="selected">All</a>
+          </li>
+          <li>
+            <a href="#/active">Active</a>
+          </li>
+          <li>
+            <a href="#/completed">Completed</a>
+          </li>
+        </ul>
+        <button class="clear-completed">Clear completed</button>
+      </footer>
+    </section>
+    <section class="graph-area-container"></section>
+    <footer class="info">
+      <p>Double-click to edit a todo</p>
+      <p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a>, Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
+      <p>Ported to ES6 by <a href="https://twitter.com/kentcdodds">Kent C. Dodds</a> and web-ified by Paul Irish</p>
+      <!--<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>-->
+      <p><a href="https://github.com/paulirish/es-modules-todomvc#readme">repo: https://github.com/paulirish/es-modules-todomvc#readme</a>
+    </footer>
+
+    <!--
+    <script type=module>
+      // ignore this. it's for a bug repro. :)
+     import {export404_ButClickThroughOnConsoleLocation} from './helpers.js'
+    </script>-->
+    <script src="bootstrap.js" type="module"></script>
+  </body>
+</html>
