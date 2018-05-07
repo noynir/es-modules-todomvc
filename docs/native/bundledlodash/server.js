@@ -20,7 +20,6 @@ const homePath = '/index.html';
 const deplist =depTree.toList({
     filename:path.join(base,'/bootstrap.js'),
     directory:path.join(base)
-    // filter: fpath => fpath.indexOf('template.js232') === -1, // optional
 });
 const deplistLodash =depTree.toList({
     filename:path.join(base,'/template.js'),
@@ -51,10 +50,10 @@ function onRequest (req, res) {
             deplist.forEach((item)=> push(res.stream, item));
             // linkStrings = deplist.map(pushWithLinkHeaders);
         }
-        // if (reqPath === '/template.js') {
-        //     deplistLodash.forEach((item)=> push(res.stream, item));
-        //     // linkStrings = deplistLodash.map(pushWithLinkHeaders);
-        // }
+        if (reqPath === '/template.js') {
+            deplistLodash.forEach((item)=> push(res.stream, item));
+            // linkStrings = deplistLodash.map(pushWithLinkHeaders);
+        }
 
         // Serve file
         res.stream.respondWithFD(file, {
@@ -126,4 +125,4 @@ function buildUrl(filePath){
 //     stream.end('<h1>Hello World</h1>');
 // });
 
-server.listen(8082);
+server.listen(8083);

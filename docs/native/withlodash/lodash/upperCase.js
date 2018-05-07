@@ -1,4 +1,4 @@
-import createCompounder from './createCompounder.js';
+import createCompounder from './_createCompounder.js';
 
 /**
  * Converts `string`, as space separated words, to upper case.

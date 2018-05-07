@@ -45,9 +45,11 @@
     "build:withlodash": "webpack --config webpack.withlodash.js",
     "build:lazy": "webpack --config webpack.lazy.js",
     "serve:round1": "webpack-dev-server --config webpack.round1.js",
-    "serve:http2": "node ./native/http2/server.js",
+    "serve:http2": "node ./docs/native/http2/server.js",
+    "serve:http2-bundled": "node ./docs/native/bundledlodash/server.js",
     "serve:native":"http-server ./native",
     "serve:bundled":"http-server ./dist",
-    "start": "http-server ./docs"
+    "start": "http-server ./docs -S -C ./localhost.crt -K ./localhost.key ",
+    "start:sw": "http-server ./docs/native/sw -p 8085"
   }
 }

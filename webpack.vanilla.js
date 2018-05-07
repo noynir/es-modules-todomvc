@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = merge(common, {
     entry: './src/vanilla/bootstrap.js',
     output:{
-        path: `${__dirname}/app/bundled/vanilla`
+        path: `${__dirname}/docs/bundled/vanilla`
     },
     plugins: [
         new HtmlwebpackPlugin({
