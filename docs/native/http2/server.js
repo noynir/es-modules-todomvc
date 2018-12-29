@@ -88,7 +88,7 @@ function push (stream, _path) {
         return;
     }
 
-    stream.pushStream({ [HTTP2_HEADER_PATH]: relPath}, (pushStream) => {
+    stream.pushStream({ [HTTP2_HEADER_PATH]: relPath}, (err, pushStream) => {
         pushStream.respondWithFD(file,{
             'content-type': mimeType,
             ':status': 200,
